@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        _rotationInput = new Vector3(Input.GetAxisRaw("MoveHorizontal"), 0,  Input.GetAxisRaw("MoveVertical"));
+        _rotationInput = new Vector3(Input.GetAxisRaw("OrientationHorizontal"), 0,  Input.GetAxisRaw("OrientationVertical"));
         _moveInput.Normalize();
     }
 

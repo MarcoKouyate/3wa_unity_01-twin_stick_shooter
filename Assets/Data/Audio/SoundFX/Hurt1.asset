@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hurt1
   m_EditorClassIdentifier: 
   title: Hurt1
-  clip: {fileID: 8300000, guid: 3294c76938f657444898a5040228b370, type: 3}
+  clip: {fileID: 8300000, guid: 5c26789fcf77e83439fa6c14921c32d4, type: 3}
   volume: 1
