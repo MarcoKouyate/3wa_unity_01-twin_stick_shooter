@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Nier/NierMenu.unity
+    guid: 0712d167e0c4aeb4da341cb826d65158
+  - enabled: 1
+    path: Assets/Scenes/Nier/Nier.unity
+    guid: 8a27962e7e19d2f48b44325cf63eb022
+  - enabled: 1
+    path: Assets/Scenes/Nier/NierGameOver.unity
+    guid: 6c63b578c2487264eb3d4df6239a6623
+  - enabled: 1
+    path: Assets/Scenes/Nier/NierWin.unity
+    guid: cad83e10037ec664e8b696a7ac5a1e39
+  m_configObjects: {}
