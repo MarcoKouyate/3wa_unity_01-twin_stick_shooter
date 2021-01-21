@@ -1,7 +1,11 @@
 ﻿# Planning
 
-## TODO
+## DONE
+* Git support
 * Music
+* Camera
+
+## TODO
 * Sound effects
 * Scriptable object for balancing game
 * Waves and wave management
@@ -16,6 +20,7 @@
 * Own assets
 * Different enemies
 * True dual stick (mouse support)
+* Do not reset music between scenes
 
 ## LOOK LIKE NIER
 * Shaders
