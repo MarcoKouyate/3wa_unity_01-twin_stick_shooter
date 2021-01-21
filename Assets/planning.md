@@ -15,6 +15,7 @@
 * Gamepad support
 
 ## PRETTY AND COOL
+* Invulnerability after taking damage
 * Particle system ( also on laser impact!)
 * Better graphics
 * Better Camera motion

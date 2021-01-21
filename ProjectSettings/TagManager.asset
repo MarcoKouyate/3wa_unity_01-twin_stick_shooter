@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Enemy Bullet
   - Ally Bullet
+  - Shield
   layers:
   - Default
   - TransparentFX
