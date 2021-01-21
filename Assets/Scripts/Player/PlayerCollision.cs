@@ -14,7 +14,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Shield"))
         {
             health.TakeDamage(1);
         }

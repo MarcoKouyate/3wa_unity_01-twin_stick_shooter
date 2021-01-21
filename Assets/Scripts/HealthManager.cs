@@ -40,7 +40,7 @@ public class HealthManager : MonoBehaviour
     public void TakeDamage(float amount)
     {
         _currentHP -= amount * _armorMultiplier;
-        _audio.Play(_damageSFX);
+    
     }
 
     public void heal(float amount)
