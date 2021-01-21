@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d32c3f721592f48866317df2db46cd, type: 3}
   m_Name: Menu Music
   m_EditorClassIdentifier: 
-  audioName: Menu Music
-  audioClip: {fileID: 8300000, guid: 8151c5bd2c8e674419c2fa9907868073, type: 3}
+  title: Menu Music
+  clip: {fileID: 8300000, guid: 8151c5bd2c8e674419c2fa9907868073, type: 3}
   volume: 1

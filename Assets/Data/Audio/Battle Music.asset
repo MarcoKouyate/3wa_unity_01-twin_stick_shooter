@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d32c3f721592f48866317df2db46cd, type: 3}
   m_Name: Battle Music
   m_EditorClassIdentifier: 
-  audioName: Battle Music
-  audioClip: {fileID: 8300000, guid: a4a60091508f15647a9d4b2ac52fdd11, type: 3}
+  title: Battle Music
+  clip: {fileID: 8300000, guid: a4a60091508f15647a9d4b2ac52fdd11, type: 3}
   volume: 1

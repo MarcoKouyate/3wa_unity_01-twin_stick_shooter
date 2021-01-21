@@ -24,7 +24,7 @@ public class AudioManager : MonoBehaviour
 
     public void Load(AudioData audio)
     {
-        Load(audio.audioClip);
+        Load(audio.clip);
     }
 
     public void Load(string name)
@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
         bool found = false;
         foreach (AudioData audio in audioClips)
         {
-            if (string.Equals(audio.audioName, name))
+            if (string.Equals(audio.title, name))
             {
                 found = true;
                 Load(audio);
@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(AudioData audio)
     {
-        Load(audio.audioClip);
+        Load(audio.clip);
         Play();
     }
 
@@ -80,9 +80,9 @@ public class AudioManager : MonoBehaviour
 
         foreach (AudioData audio in audioClips)
         {
-            if (audioNames.Contains(audio.audioName))
+            if (audioNames.Contains(audio.title))
             {
-                Debug.LogWarning($"{audio.audioName} is loaded several times in AudioManager");
+                Debug.LogWarning($"{audio.title} is loaded several times in AudioManager");
 
                 if (removeDouble)
                 {
@@ -90,7 +90,7 @@ public class AudioManager : MonoBehaviour
                 }
             }
 
-            audioNames.Add(audio.audioName);
+            audioNames.Add(audio.title);
             newAudioClips.Add(audio);
         }
 

@@ -3,7 +3,7 @@
 [CreateAssetMenu]
 public class AudioData : ScriptableObject
 {
-    public string audioName;
-    public AudioClip audioClip;
+    public string title;
+    public AudioClip clip;
     public float volume = 1f;
 }
