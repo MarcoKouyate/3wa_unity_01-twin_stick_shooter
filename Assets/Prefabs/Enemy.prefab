@@ -235,7 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHP: 4
   _currentHP: 0
-  armorMultiplier: 1
+  _armorMultiplier: 1
+  _damageSFX: {fileID: 11400000, guid: 46532b57b86616f44a976777cea81adc, type: 2}
 --- !u!114 &-7296226105354042835
 MonoBehaviour:
   m_ObjectHideFlags: 0

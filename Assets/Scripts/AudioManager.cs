@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioData[] audioClips;
-    [SerializeField] private bool removeDouble = false;
-
     private AudioSource _source;
 
     private void Awake()
     {
         _source = GetComponent<AudioSource>();
-        CheckRedondance();
+
+        if (_source == null)
+        {
+            _source = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     // LOAD
@@ -27,26 +28,8 @@ public class AudioManager : MonoBehaviour
         Load(audio.clip);
     }
 
-    public void Load(string name)
-    {
-        bool found = false;
-        foreach (AudioData audio in audioClips)
-        {
-            if (string.Equals(audio.title, name))
-            {
-                found = true;
-                Load(audio);
-            }
-        }
-
-        if (!found)
-        {
-            Debug.LogError($"AudioData {name} is not loaded in Audio Manager");
-        }
-    }
 
     // PLAY
-
     public void Play()
     {
         _source.Play();
@@ -64,42 +47,16 @@ public class AudioManager : MonoBehaviour
         Play();
     }
 
-    public void Play(string name)
+    static public AudioManager getFrom(GameObject caller)
     {
-        Load(name);
-        Play();
-    }
+        AudioManager audioManager = caller.GetComponent<AudioManager>();
 
-
-    // CHECK
-
-    private void CheckRedondance()
-    {
-        List<string> audioNames = new List<string>();
-        List<AudioData> newAudioClips = new List<AudioData>();
-
-        foreach (AudioData audio in audioClips)
+        if(audioManager == null)
         {
-            if (audioNames.Contains(audio.title))
-            {
-                Debug.LogWarning($"{audio.title} is loaded several times in AudioManager");
-
-                if (removeDouble)
-                {
-                    continue;
-                }
-            }
-
-            audioNames.Add(audio.title);
-            newAudioClips.Add(audio);
+            audioManager = caller.AddComponent<AudioManager>();
         }
 
-        if (removeDouble && audioNames.Count < audioClips.Length)
-        {
-            Debug.LogWarning("Redundant files in AudioManager have been deleted.");
-        }
-
-        audioClips = newAudioClips.ToArray();
+        return audioManager;
     }
 
 }

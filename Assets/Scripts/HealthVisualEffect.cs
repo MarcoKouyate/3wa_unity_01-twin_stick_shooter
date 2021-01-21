@@ -12,12 +12,14 @@ public class HealthVisualEffect : MonoBehaviour
     private Color originalColor;
 
     private float brightness;
+    private AudioManager _audio;
 
     private void Awake()
     {
         health = GetComponent<HealthManager>();
         material = GetComponent<MeshRenderer>().material;
         originalColor = material.color;
+        _audio = GetComponent<AudioManager>();
     }
 
     private void Update()

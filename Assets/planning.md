@@ -4,9 +4,9 @@
 * Git support
 * Music
 * Camera
+* Sound effects
 
 ## TODO
-* Sound effects
 * Scriptable object for balancing game
 * Waves and wave management
 * Weapon system (damage and patterns)
@@ -17,6 +17,7 @@
 ## PRETTY AND COOL
 * Particle system ( also on laser impact!)
 * Better graphics
+* Better Camera motion
 * Own assets
 * Different enemies
 * True dual stick (mouse support)

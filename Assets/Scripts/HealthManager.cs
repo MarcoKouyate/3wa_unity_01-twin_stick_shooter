@@ -11,13 +11,17 @@ public class HealthManager : MonoBehaviour
     private float _currentHP;
 
     [SerializeField]
-    private float armorMultiplier = 1f;
+    private float _armorMultiplier = 1f;
 
+    [SerializeField]
+    private AudioData _damageSFX;
+
+    private AudioManager _audio;
 
     private void Awake()
     {
         _currentHP = _maxHP;
-
+        _audio = AudioManager.getFrom(gameObject);
     }
 
     private void Update()
@@ -35,7 +39,8 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        _currentHP -= amount * armorMultiplier;
+        _currentHP -= amount * _armorMultiplier;
+        _audio.Play(_damageSFX);
     }
 
     public void heal(float amount)
