@@ -71,7 +71,6 @@ public class LevelManager : MonoBehaviour
     private void NextWave()
     {
         loadingWave = false;
-        Debug.Log($"loading wave {_waveNumber} over {_level.waves.Length}");
         GameObject.Instantiate(_level.waves[_waveNumber - 1]);
         _enemyCount.value = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
