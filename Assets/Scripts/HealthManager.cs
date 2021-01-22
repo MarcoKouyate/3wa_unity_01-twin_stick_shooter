@@ -13,15 +13,13 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     private float _armorMultiplier = 1f;
 
-    [SerializeField]
-    private AudioData _damageSFX;
-
     private AudioManager _audio;
+    private List<IHealthObserver> observers;
 
     private void Awake()
     {
         _currentHP = _maxHP;
-        _audio = AudioManager.getFrom(gameObject);
+        observers = new List<IHealthObserver>();
     }
 
     private void LateUpdate()
@@ -33,14 +31,29 @@ public class HealthManager : MonoBehaviour
     {
         if(isDead())
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    public void Die()
+    {
+        foreach (IHealthObserver observer in observers)
+        {
+            observer.OnDeath();
+        }
+
+        Destroy(gameObject);
     }
 
     public void TakeDamage(float amount)
     {
         _currentHP -= amount * _armorMultiplier;
-        _audio.Play(_damageSFX);
+
+
+        foreach(IHealthObserver observer in observers)
+        {
+            observer.OnDamage(amount);
+        }
     }
 
     public void heal(float amount)
@@ -65,5 +78,21 @@ public class HealthManager : MonoBehaviour
         }
 
         return 0;
+    }
+
+    public void Subcribe(IHealthObserver observer)
+    {
+        if(!observers.Contains(observer))
+        {
+            observers.Add(observer);
+        }
+    }
+
+    public void Unsubcribe(IHealthObserver observer)
+    {
+        while (observers.Contains(observer))
+        {
+            observers.Remove(observer);
+        }
     }
 }

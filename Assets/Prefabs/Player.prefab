@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _deathEffect: {fileID: 1790054657294582046, guid: 83229b1ce5d4dbc4caadce358cfa5d89,
     type: 3}
+  _damageSFX: {fileID: 11400000, guid: 46532b57b86616f44a976777cea81adc, type: 2}
 --- !u!114 &1623650569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +184,6 @@ MonoBehaviour:
   _maxHP: 3
   _currentHP: 0
   _armorMultiplier: 1
-  _damageSFX: {fileID: 11400000, guid: 46532b57b86616f44a976777cea81adc, type: 2}
 --- !u!1001 &3134263384135306481
 PrefabInstance:
   m_ObjectHideFlags: 0
