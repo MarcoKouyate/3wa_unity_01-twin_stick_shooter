@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 1f;
-    public float lifetime = 1f;
+    public float _speed = 1f;
 
     private Rigidbody _rigidbody;
     private Vector3 _velocity;
@@ -15,22 +14,27 @@ public class Bullet : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _startTime = Time.time;
+
+        // Debug.Log
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        Debug.Log("horizontal input: " + horizontal);
+
     }
 
     private void FixedUpdate()
     {
-        _velocity = transform.forward * speed;
-        Vector3 movementStep = _velocity * Time.fixedDeltaTime;
-        Vector3 newPosition = transform.position + movementStep;
-            
-       _rigidbody.MovePosition(newPosition);
+        _velocity = transform.forward * _speed * Time.fixedDeltaTime;
+        Vector3 newPosition = transform.position + _velocity;
+        _rigidbody.MovePosition(newPosition);
     }
 
-    private void Update()
+    public void ChangeSpeed(float speed)
     {
-        if(Time.time > _startTime + lifetime)
-        {
-            Destroy(gameObject);
-        }
+        _speed = speed;
+    }
+
+    public void DestroyWithDelay(float delay)
+    {
+         Destroy(gameObject, delay);
     }
 }

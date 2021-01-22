@@ -31,11 +31,9 @@ public class Shooter : MonoBehaviour
 
     private void sendProjectile()
     {
-        GameObject bullet = GameObject.Instantiate(_bulletPrefab);
-        bullet.transform.position = _bulletSpawnTransform.position;
-        bullet.transform.rotation = _bulletSpawnTransform.rotation;
-        bullet.GetComponent<Bullet>().speed = bulletSpeed;
-        bullet.GetComponent<Bullet>().lifetime = bulletLifetime;
+        GameObject bullet = Instantiate(_bulletPrefab, _bulletSpawnTransform.position, _bulletSpawnTransform.rotation);
+        bullet.GetComponent<Bullet>().ChangeSpeed(bulletSpeed);
+        bullet.GetComponent<Bullet>().DestroyWithDelay(bulletLifetime);
 
         if (sfx)
         {

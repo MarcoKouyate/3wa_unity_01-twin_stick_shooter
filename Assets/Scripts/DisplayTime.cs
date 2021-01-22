@@ -7,11 +7,11 @@ public class DisplayTime : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
 
-    private Text text;
+    private Text textComponent;
 
     public void Awake()
     {
-        text = GetComponent<Text>();
+        textComponent = GetComponent<Text>();
     }
 
     public void Update()
@@ -23,7 +23,7 @@ public class DisplayTime : MonoBehaviour
         {
             string minutes = Mathf.Floor(remaining / 60).ToString("00");
             string seconds = (remaining % 60).ToString("00");
-            text.text = $"{minutes}:{seconds}";
+            textComponent.text = $"{minutes}:{seconds}";
         }
             
     }
