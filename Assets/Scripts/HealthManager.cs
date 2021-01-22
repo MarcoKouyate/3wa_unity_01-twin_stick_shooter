@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField]
-    private float _maxHP = 0;
-
-    [SerializeField]
-    private float _currentHP;
-
-    [SerializeField]
-    private float _armorMultiplier = 1f;
+    [SerializeField] private float _maxHP = 0;
+    [SerializeField] private float _currentHP;
+    [SerializeField] private float _armorMultiplier = 1f;
+    public float _invicibilityDuration = 0.5f;
 
     private AudioManager _audio;
-    private List<IHealthObserver> observers;
+    private List<IHealthObserver> _observers;
+    private float _impactTime;
 
     private void Awake()
     {
         _currentHP = _maxHP;
-        observers = new List<IHealthObserver>();
+        _observers = new List<IHealthObserver>();
+        _impactTime = 0f;
     }
 
     private void LateUpdate()
@@ -37,7 +35,7 @@ public class HealthManager : MonoBehaviour
 
     public void Die()
     {
-        foreach (IHealthObserver observer in observers)
+        foreach (IHealthObserver observer in _observers)
         {
             observer.OnDeath();
         }
@@ -47,16 +45,24 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        _currentHP -= amount * _armorMultiplier;
-
-
-        foreach(IHealthObserver observer in observers)
+        if(!IsInvicible())
         {
-            observer.OnDamage(amount);
+            _currentHP -= amount * _armorMultiplier;
+            _impactTime = Time.time;
+
+            foreach (IHealthObserver observer in _observers)
+            {
+                observer.OnDamage(amount);
+            }
         }
     }
 
-    public void heal(float amount)
+    public bool IsInvicible()
+    {
+        return (Time.time < _impactTime + _invicibilityDuration);
+    }
+
+    public void Heal(float amount)
     {
         _currentHP += amount;
         if (_currentHP > _maxHP)
@@ -70,7 +76,7 @@ public class HealthManager : MonoBehaviour
         return _currentHP <= 0;
     }
 
-    public float ratio()
+    public float Ratio()
     {
         if(_maxHP != 0)
         {
@@ -82,17 +88,17 @@ public class HealthManager : MonoBehaviour
 
     public void Subcribe(IHealthObserver observer)
     {
-        if(!observers.Contains(observer))
+        if(!_observers.Contains(observer))
         {
-            observers.Add(observer);
+            _observers.Add(observer);
         }
     }
 
     public void Unsubcribe(IHealthObserver observer)
     {
-        while (observers.Contains(observer))
+        while (_observers.Contains(observer))
         {
-            observers.Remove(observer);
+            _observers.Remove(observer);
         }
     }
 }

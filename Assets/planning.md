@@ -7,10 +7,10 @@
 * Sound effects
 * Gamepad support
 * Waves and wave management
+* Invulnerability after taking damage
 
 
 ## PRETTY AND COOL
-* Invulnerability after taking damage
 * Particle system (also on laser impact!)
 * Better graphics
 * Better Camera motion

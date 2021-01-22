@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class HealthVisualEffect : IHealthObserver 
 {
-    [SerializeField]
-    private GameObject _deathEffect;
-
-    [SerializeField]
-    private AudioData _damageSFX;
-
-    [SerializeField]
-    private float _flashDuration;
+    [SerializeField] private GameObject _deathEffect;
+    [SerializeField] private AudioData _damageSFX;
 
     private HealthManager _health;
     private Material _material;
@@ -20,6 +14,7 @@ public class HealthVisualEffect : IHealthObserver
     private bool _isDamaged;
     private float _impactTime;
     private float _ratio;
+    private float _flashDuration;
 
     private void Awake()
     {
@@ -28,6 +23,7 @@ public class HealthVisualEffect : IHealthObserver
         _originalColor = _material.color;
         _audio = AudioManager.getFrom(gameObject);
         _isDamaged = false;
+        _flashDuration = _health._invicibilityDuration;
     }
 
     private void Start()
@@ -38,12 +34,9 @@ public class HealthVisualEffect : IHealthObserver
 
     public void Update()
     {
-        if(_isDamaged)
+        if (_isDamaged)
         {
             DamageEffect();
-        } else
-        {
-            HealthColor();
         }
     }
 
@@ -67,17 +60,13 @@ public class HealthVisualEffect : IHealthObserver
         return color + (residual - (residual * _ratio));
     }
 
-    public void HealthColor()
-    {
-        float brightness = _health.ratio();
-        _material.color = new Color(_originalColor.r * brightness, _originalColor.g * brightness, _originalColor.b * brightness);
-    }
-
     public override void OnDamage(float amount)
     {
         _audio.Play(_damageSFX);
         _isDamaged = true;
         _impactTime = Time.time;
+        float brightness = _health.Ratio();
+        _originalColor = new Color(_originalColor.r * brightness, _originalColor.g * brightness, _originalColor.b * brightness);
     }
 
 
