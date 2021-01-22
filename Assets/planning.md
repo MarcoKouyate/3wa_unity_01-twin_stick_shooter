@@ -5,14 +5,15 @@
 * Music
 * Camera
 * Sound effects
+* Gamepad support
 
 ## TODO
-* Scriptable object for balancing game
 * Waves and wave management
+* Scriptable object for balancing game
 * Weapon system (damage and patterns)
 * Shield system
 * Game Menu
-* Gamepad support
+* README (How to install game)
 
 ## PRETTY AND COOL
 * Invulnerability after taking damage

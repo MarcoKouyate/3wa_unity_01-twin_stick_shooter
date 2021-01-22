@@ -2,8 +2,7 @@
 
 public class EnemyCollision : MonoBehaviour
 {
-    [SerializeField]
-    IntVariable _enemyCount;
+    [SerializeField] IntVariable _enemyCount;
 
     HealthManager health;
 

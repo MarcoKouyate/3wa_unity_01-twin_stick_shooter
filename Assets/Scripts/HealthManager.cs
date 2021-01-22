@@ -24,7 +24,7 @@ public class HealthManager : MonoBehaviour
         _audio = AudioManager.getFrom(gameObject);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         Survive();
     }
