@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField] private float _maxHP = 0;
-    [SerializeField] private float _currentHP;
     [SerializeField] private float _armorMultiplier = 1f;
+    
+    public float maxHP { get; set; }
+    public float currentHP { get; set; }
+
     public float _invicibilityDuration = 0.5f;
 
     private AudioManager _audio;
@@ -15,7 +17,8 @@ public class HealthManager : MonoBehaviour
 
     private void Awake()
     {
-        _currentHP = _maxHP;
+        maxHP = 3;
+        currentHP = maxHP;
         _observers = new List<IHealthObserver>();
         _impactTime = 0f;
     }
@@ -47,7 +50,7 @@ public class HealthManager : MonoBehaviour
     {
         if(!IsInvicible())
         {
-            _currentHP -= amount * _armorMultiplier;
+            currentHP -= amount * _armorMultiplier;
             _impactTime = Time.time;
 
             foreach (IHealthObserver observer in _observers)
@@ -64,23 +67,23 @@ public class HealthManager : MonoBehaviour
 
     public void Heal(float amount)
     {
-        _currentHP += amount;
-        if (_currentHP > _maxHP)
+        currentHP += amount;
+        if (currentHP > maxHP)
         {
-            _currentHP = _maxHP;
+            currentHP = maxHP;
         }
     }
 
     public bool isDead()
     {
-        return _currentHP <= 0;
+        return currentHP <= 0;
     }
 
     public float Ratio()
     {
-        if(_maxHP != 0)
+        if(maxHP != 0)
         {
-            return _currentHP / _maxHP;
+            return currentHP / maxHP;
         }
 
         return 0;

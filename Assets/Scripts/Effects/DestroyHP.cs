@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class DestroyHP : MonoBehaviour
 {
-    [SerializeField] IntVariable playerHP;
+    [SerializeField] HealthManager playerHP;
     [SerializeField] int hp;
 
     private void Update()
     {
-        if(playerHP.value <= hp)
+        float damage = playerHP.maxHP - playerHP.currentHP;
+        if(damage >= hp)
         {
             Destroy(gameObject);
         }
