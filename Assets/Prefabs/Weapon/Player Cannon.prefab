@@ -159,7 +159,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 6011593680764615529, guid: 73180a529da76864299b816a871891fb,
     type: 3}
   _bulletSpawnTransform: {fileID: 6538812628552480929}
-  bulletSpeed: 20
+  bulletSpeed: 30
   interval: 0.2
   bulletLifetime: 3
   sfx: {fileID: 11400000, guid: 170913775ff187d4b926554fbd93ab66, type: 2}
@@ -271,5 +271,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77213b58212ffeb4e895b8fab376e2cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips: []
-  removeDouble: 0
