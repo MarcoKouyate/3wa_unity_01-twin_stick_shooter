@@ -19,10 +19,7 @@ public class CameraMovement : MonoBehaviour
         {
             offset.Normalize(); 
             offset *= deadZone;
-
-            Debug.Log("camera offset :" + offset);
             transform.position = playerTransform.position + offset;
-            Debug.Log("camera transform :" + transform.position);
         }
 
     }

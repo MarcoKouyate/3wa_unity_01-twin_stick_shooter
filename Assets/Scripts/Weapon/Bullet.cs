@@ -14,11 +14,6 @@ public class Bullet : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _startTime = Time.time;
-
-        // Debug.Log
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        Debug.Log("horizontal input: " + horizontal);
-
     }
 
     private void FixedUpdate()

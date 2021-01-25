@@ -6,6 +6,7 @@ public class HealthVisualEffect : IHealthObserver
 {
     [SerializeField] private GameObject _deathEffect;
     [SerializeField] private AudioData _damageSFX;
+    [SerializeField] private MeshRenderer _target;
 
     private HealthManager _health;
     private Material _material;
@@ -19,7 +20,13 @@ public class HealthVisualEffect : IHealthObserver
     private void Awake()
     {
         _health = GetComponent<HealthManager>();
-        _material = GetComponent<MeshRenderer>().material;
+
+        if(_target == null)
+        {
+            _target = GetComponent<MeshRenderer>();
+        }
+
+        _material = _target.material;
         _originalColor = _material.color;
         _audio = AudioManager.getFrom(gameObject);
         _isDamaged = false;
