@@ -13,7 +13,7 @@ This project will be completed before January 27th.
 ### Graphics
 * Better graphics
 * Shaders
-* Replace assets
+
 
 ### Level Design
 * Different enemies
@@ -41,6 +41,7 @@ This project will be completed before January 27th.
 * Invulnerability after taking damage
 * Particle system (also on laser impact!)
 * Better Camera motion
+* Replace assets
 
 ## MORE
 * Own Assets
