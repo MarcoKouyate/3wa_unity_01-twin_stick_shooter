@@ -139,8 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07a880ab3519e34eb0859ff4dd9f265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHP: 4
-  _currentHP: 0
   _armorMultiplier: 1
   _invicibilityDuration: 0.3
 --- !u!114 &-7296226105354042835
