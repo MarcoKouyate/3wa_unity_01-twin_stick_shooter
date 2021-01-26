@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nier/NierWin.unity
     guid: cad83e10037ec664e8b696a7ac5a1e39
+  - enabled: 1
+    path: Assets/Scenes/Nier/Bootstrap.unity
+    guid: 450833c7b9bc575488b80b2c42a0c82b
   m_configObjects: {}

@@ -10,10 +10,6 @@ This project will be completed before January 27th.
 ### Controls
 * True dual stick (mouse support)
 
-### Graphics
-* Better graphics
-* Shaders
-
 ### Level Design
 * Different enemies
 * Levels
@@ -26,6 +22,12 @@ This project will be completed before January 27th.
 ### Scene
 * Do not reset music between scenes
 * Game Menu
+
+### Graphics
+* Better particles
+* Trail particles
+* Better UI
+* Screen shader
 
 ### Notice
 * README (How to install game)
@@ -41,6 +43,8 @@ This project will be completed before January 27th.
 * Particle system (also on laser impact!)
 * Better Camera motion
 * Replace assets
+* Better graphics
+* Shaders
 
 ## MORE
 * Own Assets

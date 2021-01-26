@@ -3,7 +3,6 @@
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private HealthManager playerHealth;
-    [SerializeField] private GameObject sceneManager;
     [SerializeField] private LevelData _level;
     [SerializeField] private IntVariable _enemyCount;
 
@@ -17,7 +16,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        _sceneChange = sceneManager.GetComponent<SceneChange>();
+        _sceneChange = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneChange>();
         _startTime = Time.time;
         _waveNumber = 1;
         _gameDuration = _level.duration;
