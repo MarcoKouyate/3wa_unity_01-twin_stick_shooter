@@ -7,27 +7,35 @@ The goal is to make a twin-stick shooter inspired by Nier:Automata hacking minig
 ## TO DO
 This project will be completed before January 27th.
 
-### Controls
-* True dual stick (mouse support)
-
-### Level Design
-* Different enemies
-* Levels
-
-### Gameplay
-* Weapon system (damage and patterns)
-* Shield system
-* Scriptable object for balancing game
-
-### Scene
-* Do not reset music between scenes
-* Game Menu
 
 ### Graphics
 * Better particles
 * Trail particles
 * Better UI
 * Screen shader
+
+### Scene
+* Game Menu
+* Pause
+* Change control options
+* Credits
+
+## Audio
+* Do not reset music between scenes
+* Sound for shield
+
+### Gameplay
+* Weapon system (damage and patterns)
+* Shield system
+* Scriptable object for balancing game
+
+### Level Design
+* Different enemies
+* Levels
+
+
+
+
 
 ### Notice
 * README (How to install game)
@@ -45,6 +53,7 @@ This project will be completed before January 27th.
 * Replace assets
 * Better graphics
 * Shaders
+* True dual stick (mouse support)
 
 ## MORE
 * Own Assets

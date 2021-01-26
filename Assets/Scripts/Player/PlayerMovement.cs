@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float speed = 1f;
-
-
-    private Rigidbody _rb;
-    Vector3 _moveInput;
-    Vector3 _rotationInput;
+    [SerializeField] private float speed = 1f;
 
     private void Awake()
     {
@@ -20,17 +15,14 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        _rotationInput = new Vector3(Input.GetAxisRaw("OrientationHorizontal"), 0,  Input.GetAxisRaw("OrientationVertical"));
         _moveInput.Normalize();
     }
 
     private void FixedUpdate()
     {
         _rb.velocity = _moveInput * speed;
-        if (!Mathf.Approximately(_rotationInput.sqrMagnitude, 0 ))
-        {
-            Quaternion lookRotation = Quaternion.LookRotation(_rotationInput);
-            _rb.MoveRotation(lookRotation);
-        }
     }
+
+    private Rigidbody _rb;
+    Vector3 _moveInput;
 }

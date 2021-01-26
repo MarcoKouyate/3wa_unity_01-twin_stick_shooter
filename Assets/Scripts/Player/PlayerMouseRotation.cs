@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 
-    public class PlayerMouseRotation : MonoBehaviour
-    {
+ public class PlayerMouseRotation : MonoBehaviour
+{
         private void Awake()
         {
             _transform = transform;
@@ -12,7 +12,7 @@
         }
 
 
-        private void Update()
+        public void Update()
         {
             Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
