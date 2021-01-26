@@ -14,7 +14,6 @@ This project will be completed before January 27th.
 * Better graphics
 * Shaders
 
-
 ### Level Design
 * Different enemies
 * Levels
