@@ -9,8 +9,7 @@ This project will be completed before January 27th.
 
 
 ### Graphics
-* Better particles
-* Trail particles
+
 * Better UI
 * Screen shader
 
@@ -33,8 +32,9 @@ This project will be completed before January 27th.
 * Different enemies
 * Levels
 
-
-
+### Bonus
+* Collectables
+* Scoring
 
 
 ### Notice
@@ -54,6 +54,8 @@ This project will be completed before January 27th.
 * Better graphics
 * Shaders
 * True dual stick (mouse support)
+* Better particles
+* Trail particles
 
 ## MORE
 * Own Assets
