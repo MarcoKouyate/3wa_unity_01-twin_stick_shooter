@@ -2,44 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class EnemyWalker : MonoBehaviour
 {
-    private Transform _playerTransform;
-    private Transform _enemyTransform;
-    private Rigidbody _rigidbody;
-
-    [SerializeField]
-    private float rotationSpeed = 1f;
-
-    [SerializeField]
-    private float moveSpeed = 1f;
+    [SerializeField] private float _rotationSpeed = 1f;
+    [SerializeField] private float _moveSpeed = 1f;
 
     private void Awake()
     {
-        _playerTransform = GameObject.Find("Player").transform;
         _enemyTransform = transform;
         _rigidbody = GetComponent<Rigidbody>();
+
+        _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+
+        if (_playerTransform == null)
+        {
+            Debug.LogWarning("Enemy Walker component can't find any gameObject with Player tag");
+        }
     }
 
     private void FixedUpdate()
     {
-        Quaternion rotation = TurnTowardsPlayer();
-        _rigidbody.MoveRotation(rotation);
-        _rigidbody.velocity = _enemyTransform.forward * moveSpeed;
+        TurnTowardsPlayer();
+        MoveForward();
     }
 
-    private Quaternion TurnTowardsPlayer()
+    private void MoveForward()
     {
-        Quaternion rotation = _enemyTransform.rotation;
+        _rigidbody.velocity = _enemyTransform.forward * _moveSpeed;
+    }
 
-        if (_playerTransform != null)
+    private void TurnTowardsPlayer()
+    {
+        if (_playerTransform == null)
         {
-            float step = rotationSpeed * Time.deltaTime * 100;
-            Vector3 relativePos = _playerTransform.position - _enemyTransform.position;
-            Quaternion targetRotation = Quaternion.LookRotation(relativePos, Vector3.up);
-            rotation = Quaternion.RotateTowards(_enemyTransform.rotation, targetRotation, step);
+            return;
         }
 
-        return rotation;
+        float step = _rotationSpeed * Time.deltaTime * 100;
+        Vector3 directionToPlayer = (_playerTransform.position - _enemyTransform.position).normalized;
+        Quaternion rotationToPlayer = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+        Quaternion rotation = Quaternion.RotateTowards(_enemyTransform.rotation, rotationToPlayer, step);
+        _rigidbody.MoveRotation(rotation);
     }
+
+
+    private Transform _playerTransform;
+    private Transform _enemyTransform;
+    private Rigidbody _rigidbody;
 }
