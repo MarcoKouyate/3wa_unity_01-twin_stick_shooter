@@ -20,9 +20,11 @@ public class PauseGame : MonoBehaviour
     {
         if(pauseMenu.activeSelf)
         {
+            Time.timeScale = 1f;
             pauseMenu.SetActive(false);
         } else
         {
+            Time.timeScale = 0;
             pauseMenu.SetActive(true);
         }
     }
