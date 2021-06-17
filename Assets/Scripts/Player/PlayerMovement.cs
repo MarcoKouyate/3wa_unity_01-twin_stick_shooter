@@ -10,22 +10,27 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _transform = transform;
         _moveInput = Vector3.zero;
     }
 
-    private void Update()
+
+    public void Move(Vector2 direction)
     {
-        _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
-        _moveMagnitude = Mathf.Clamp01(_moveInput.magnitude);
-        _moveInput.Normalize();
+        _moveInput = new Vector3(direction.x, 0, direction.y);
+    }
+
+    public void Rotate(Quaternion rotation)
+    {
+        _transform.rotation = rotation;
     }
 
     private void FixedUpdate()
     {
-        _rb.velocity = _moveInput * speed * _moveMagnitude;
+        _rb.velocity = _moveInput * speed ;
     }
 
     private Rigidbody _rb;
     Vector3 _moveInput;
-    float _moveMagnitude;
+    Transform _transform;
 }

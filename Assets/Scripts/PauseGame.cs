@@ -3,6 +3,7 @@
 public class PauseGame : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private TwinStickShooter.PlugToPlayer plug; 
 
     private void Start()
     {
@@ -27,5 +28,7 @@ public class PauseGame : MonoBehaviour
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
         }
+
+        plug.paused = pauseMenu.activeSelf;
     }
 }

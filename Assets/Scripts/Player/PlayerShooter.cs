@@ -14,11 +14,8 @@ public class PlayerShooter : MonoBehaviour
         _shooter = _weapon.GetComponent<Shooter>();
     }
 
-    private void Update()
+    public void Fire()
     {
-        if (Input.GetButton("Action"))
-        {
-            _shooter.Fire();
-        }
+        _shooter.Fire();
     }
 }
