@@ -9,6 +9,7 @@ TagManager:
   - Ally Bullet
   - Shield
   - SceneManager
+  - Explosion
   layers:
   - Default
   - TransparentFX

@@ -43,7 +43,6 @@ This project will be completed before January 27th.
 * Collectables
 * Scoring
 
-
 ### Notice
 
 * README (How to install game)
@@ -65,6 +64,7 @@ This project will be completed before January 27th.
 * True dual stick (mouse support)
 * Better particles
 * Trail particles
+* Explosion do damage (bonus)
 
 ## MORE
 

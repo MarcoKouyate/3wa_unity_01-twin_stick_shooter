@@ -22,7 +22,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy Bullet"))
+        if (other.gameObject.CompareTag("Enemy Bullet") || other.gameObject.CompareTag("Explosion"))
         {
             health.TakeDamage(1);
         }

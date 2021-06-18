@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 791e7dcc0c1e9464b84089038089bd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deathEffect: {fileID: 1037382023760120809, guid: 53c75b6be95dfae4a9be16051864fd5f,
+  _deathEffect: {fileID: 8313927807735302611, guid: d53c2aa974df85849b45d9f4be4887d4,
     type: 3}
   _damageSFX: {fileID: 11400000, guid: 46532b57b86616f44a976777cea81adc, type: 2}
   _target: {fileID: 1711813854993542306}
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 596ecf6ee8c2d5d43b418b5af99c383c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 1
-  moveSpeed: 2
+  _rotationSpeed: 1
+  _moveSpeed: 1
 --- !u!1001 &2128212006
 PrefabInstance:
   m_ObjectHideFlags: 0
