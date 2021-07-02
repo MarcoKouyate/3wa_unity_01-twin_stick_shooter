@@ -15,10 +15,13 @@ This project will be completed before January 27th.
 * Better UI
 * Screen shader
 
+### Physics
+
+* Don't push enemies
+
 ### Scene
 
 * Game Menu
-* Pause
 * Change control options
 * Credits
 
@@ -65,6 +68,7 @@ This project will be completed before January 27th.
 * Better particles
 * Trail particles
 * Explosion do damage (bonus)
+* Pause
 
 ## MORE
 
