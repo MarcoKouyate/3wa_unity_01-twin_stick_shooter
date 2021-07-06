@@ -15,8 +15,10 @@ GameObject:
   - component: {fileID: -8821681259792879296}
   - component: {fileID: 8292224278915764223}
   - component: {fileID: -7296226105354042835}
-  - component: {fileID: 1133434081}
   - component: {fileID: 1289439899284984311}
+  - component: {fileID: -7532454251306978502}
+  - component: {fileID: 3108011644116027687}
+  - component: {fileID: 1615446803113947650}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -145,20 +147,6 @@ MonoBehaviour:
     type: 3}
   _damageSFX: {fileID: 11400000, guid: 46532b57b86616f44a976777cea81adc, type: 2}
   _target: {fileID: 1711813854993542306}
---- !u!114 &1133434081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6311196521152944463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 596ecf6ee8c2d5d43b418b5af99c383c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotationSpeed: 1
-  _moveSpeed: 1
 --- !u!65 &1289439899284984311
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -172,6 +160,45 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.004, y: 0.0069511114, z: 0.0040000007}
   m_Center: {x: 0, y: -0.0014755549, z: 0.0020000003}
+--- !u!114 &-7532454251306978502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311196521152944463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69183700d4afb5643af91ea77fe77f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 1
+--- !u!114 &3108011644116027687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311196521152944463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3805ae5eac02874e818906614d932d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 1
+  _target: {fileID: 0}
+--- !u!114 &1615446803113947650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6311196521152944463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94aa432484bd59e4c8bca90531072b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2128212006
 PrefabInstance:
   m_ObjectHideFlags: 0
