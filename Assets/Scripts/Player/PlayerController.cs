@@ -4,7 +4,7 @@ namespace TwinStickShooter {
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private PlayerMovement _playerMovement;
-        [SerializeField] private PlayerShooter _playerShooter;
+        [SerializeField] private WeaponHandler _playerShooter;
 
         public void Move(Vector2 direction)
         {

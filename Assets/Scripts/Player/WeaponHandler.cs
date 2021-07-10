@@ -2,7 +2,7 @@
 
 namespace TwinStickShooter
 {
-    public class PlayerShooter : MonoBehaviour
+    public class WeaponHandler : MonoBehaviour
     {
         [SerializeField] private Weapon _weapon;
         [SerializeField] private AttackerData attacker;
