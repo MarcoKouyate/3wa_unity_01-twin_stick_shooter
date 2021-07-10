@@ -1,21 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerShooter : MonoBehaviour
+namespace TwinStickShooter
 {
-    [SerializeField]
-    GameObject _weapon;
-
-    Shooter _shooter;
-
-    private void Start()
+    public class PlayerShooter : MonoBehaviour
     {
-        _shooter = _weapon.GetComponent<Shooter>();
-    }
+        [SerializeField] private Weapon _weapon;
+        [SerializeField] private AttackerData attacker;
 
-    public void Fire()
-    {
-        _shooter.Fire();
+        public void Fire()
+        {
+            _weapon.Trigger(attacker);
+        }
     }
 }
+

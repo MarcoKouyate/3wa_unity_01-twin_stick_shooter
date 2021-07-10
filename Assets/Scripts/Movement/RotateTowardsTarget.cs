@@ -6,7 +6,6 @@ namespace TwinStickShooter {
     {
         #region Show In Inspector
         [SerializeField] private float _rotationSpeed = 1f;
-        [SerializeField] private Transform _target;
 
         [Header("Constraint Axis")]
         [SerializeField] private bool constraintX;
@@ -73,6 +72,7 @@ namespace TwinStickShooter {
         #region Private Variables
         private Transform _transform;
         private Rigidbody _rigidbody;
+        private Transform _target;
         #endregion
     }
 }

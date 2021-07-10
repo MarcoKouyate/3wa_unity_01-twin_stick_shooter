@@ -16,7 +16,6 @@ namespace TwinStickShooter {
 
             if (_plane.Raycast(ray, out float enter))
             {
-                Debug.Log("Update from TranslateToMousePosition");
                 _transform.position = ray.GetPoint(enter);
             }
             

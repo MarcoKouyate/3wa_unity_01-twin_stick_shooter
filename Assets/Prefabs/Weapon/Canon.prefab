@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3134263385193648575}
   - component: {fileID: 3134263385193648574}
   m_Layer: 0
-  m_Name: Player Cannon
+  m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0da765f8d44bb94394ef97fda016a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 6011593680764615529, guid: 73180a529da76864299b816a871891fb,
+  _bulletPrefab: {fileID: 3365292599005977336, guid: 529d13c65742d974da2ebe11e1ec88b1,
     type: 3}
   _bulletSpawnTransform: {fileID: 6538812628552480929}
   bulletSpeed: 30

@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyShooter : MonoBehaviour
+namespace TwinStickShooter
 {
-    [SerializeField]
-    private Shooter[] _shooters;
-
-
-    private void Update()
+    public class EnemyShooter : MonoBehaviour
     {
-        foreach(Shooter shooter in _shooters)
+        [SerializeField] private Shooter[] _shooters;
+        [SerializeField] private AttackerData attacker;
+
+        private void Update()
         {
-            shooter.Fire();
+            foreach (Shooter shooter in _shooters)
+            {
+                shooter.Fire(attacker);
+            }
         }
     }
 }
+

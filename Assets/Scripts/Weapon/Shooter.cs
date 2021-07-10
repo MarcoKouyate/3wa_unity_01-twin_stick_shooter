@@ -1,47 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Shooter : MonoBehaviour
+namespace TwinStickShooter
 {
-    [SerializeField] private GameObject _bulletPrefab;
-    [SerializeField] private Transform _bulletSpawnTransform;
-    [SerializeField] private float bulletSpeed = 1f;
-    [SerializeField] private float interval = 0f;
-    [SerializeField] private float bulletLifetime = 1f;
-    [SerializeField] private AudioData sfx;
-
-    private float _nextShotTime;
-    private AudioManager _audio;
-
-    private void Awake()
+    public class Shooter : MonoBehaviour
     {
-        _nextShotTime = Time.time;
-        _audio = GetComponent<AudioManager>();
-    }
+        [SerializeField] private Bullet _bulletPrefab;
+        [SerializeField] private Transform _bulletSpawnTransform;
+        [SerializeField] private float bulletSpeed = 1f;
+        [SerializeField] private float interval = 0f;
+        [SerializeField] private float bulletLifetime = 1f;
 
-    public void Fire()
-    {
-        if (Time.time >= _nextShotTime)
-        {
-             _nextShotTime = Time.time + interval;
-             sendProjectile();
-        }
-    }
+        private float _nextShotTime;
 
-    private void sendProjectile()
-    {
-        GameObject bullet = Instantiate(_bulletPrefab, _bulletSpawnTransform.position, _bulletSpawnTransform.rotation);
-        bullet.GetComponent<Bullet>().ChangeSpeed(bulletSpeed);
-        bullet.GetComponent<Bullet>().DestroyWithDelay(bulletLifetime);
+        private void Awake()
+        {
+            _nextShotTime = Time.time;
 
-        if (sfx)
-        {
-            _audio.Play(sfx);
-        } else
-        {
-            Debug.LogWarning("No sound effect has been assigned to this Game Object");
         }
 
+        public void Fire(AttackerData attacker)
+        {
+            if (Time.time >= _nextShotTime)
+            {
+                _nextShotTime = Time.time + interval;
+                SendProjectile(attacker);
+            }
+        }
+
+        private void SendProjectile(AttackerData attacker)
+        {
+            Bullet bullet = Instantiate(_bulletPrefab, _bulletSpawnTransform.position, _bulletSpawnTransform.rotation);
+            bullet.ChangeSpeed(bulletSpeed);
+            bullet.DestroyWithDelay(bulletLifetime);
+
+            AttackProjectileSetter attackerProjectilSetter = bullet.GetComponent<AttackProjectileSetter>();
+            if (!attackerProjectilSetter) return;
+
+            attackerProjectilSetter.SetAttacker(attacker);
+        }
     }
 }
