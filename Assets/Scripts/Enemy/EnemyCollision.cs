@@ -13,7 +13,7 @@ public class EnemyCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Ally Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             Destroy(other.gameObject);
             health.TakeDamage(1);

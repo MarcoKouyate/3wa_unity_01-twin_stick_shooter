@@ -10,6 +10,7 @@ TagManager:
   - Shield
   - SceneManager
   - Explosion
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - 
   - 
   - Post Processing
-  - 
-  - 
-  - 
-  - 
+  - Enemy Weapon
+  - Ally Weapon
+  - Enemy
+  - Player
   - 
   - 
   - 

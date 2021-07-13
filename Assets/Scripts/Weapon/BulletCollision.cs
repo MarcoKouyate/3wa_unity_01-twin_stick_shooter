@@ -12,16 +12,8 @@ public class BulletCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        bool notouch = other.gameObject.CompareTag("Player") && gameObject.CompareTag("Ally Bullet")  || 
-                       other.gameObject.CompareTag("Enemy")  && gameObject.CompareTag("Enemy Bullet") ||
-                       other.gameObject.CompareTag("Ally Bullet") && gameObject.CompareTag("Ally Bullet") ||
-                       other.gameObject.CompareTag("Enemy Bullet") && gameObject.CompareTag("Enemy Bullet");
-
-        if (!notouch)
-        {
-            SpawnImpact();
-            Destroy(gameObject);
-        }
+        SpawnImpact();
+        Destroy(gameObject);
     }
 
     private void SpawnImpact()

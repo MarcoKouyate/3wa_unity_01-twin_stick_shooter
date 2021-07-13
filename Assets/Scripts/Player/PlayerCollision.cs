@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -22,7 +20,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy Bullet") || other.gameObject.CompareTag("Explosion"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Explosion"))
         {
             health.TakeDamage(1);
         }

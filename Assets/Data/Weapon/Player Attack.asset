@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Player Attack
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: e69f78aff16a987448805c81ef19a6a1, type: 2}
+  layerName: Ally Weapon

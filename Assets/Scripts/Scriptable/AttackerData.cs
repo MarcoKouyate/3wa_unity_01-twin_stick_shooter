@@ -5,5 +5,6 @@ namespace TwinStickShooter {
     public class AttackerData : ScriptableObject
     {
         public Material material;
+        public string layerName;
     }
 }

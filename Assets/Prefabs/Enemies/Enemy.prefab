@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -7532454251306978502}
   - component: {fileID: 3108011644116027687}
   - component: {fileID: 1615446803113947650}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 1
-  _target: {fileID: 0}
   constraintX: 1
   constraintY: 0
   constraintZ: 1
@@ -288,6 +287,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NierHackEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea71afe864996204f936a0043c85156c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea71afe864996204f936a0043c85156c, type: 3}

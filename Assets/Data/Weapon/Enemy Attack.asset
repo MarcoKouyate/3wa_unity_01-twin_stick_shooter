@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Enemy Attack
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: f65e7c8dcd7d5bf48b558638f71cafe6, type: 2}
+  layerName: Enemy Weapon

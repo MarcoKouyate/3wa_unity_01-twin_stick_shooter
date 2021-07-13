@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784446682}
   - component: {fileID: 784446683}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,10 +205,10 @@ GameObject:
   - component: {fileID: 3561012077987659903}
   - component: {fileID: 8744779747327976291}
   - component: {fileID: 8411341652398663321}
-  - component: {fileID: 2803724600332318371}
-  m_Layer: 0
+  - component: {fileID: 1537687914}
+  m_Layer: 12
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 5349909185786310666}
   attacker: {fileID: 11400000, guid: 14f645bb1e0b91f4b9c44ea9ae0e9283, type: 2}
---- !u!114 &2803724600332318371
+--- !u!114 &1537687914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,9 +349,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8316518068214881532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecf461c37f4d8d646886bd8eedcc4836, type: 3}
+  m_Script: {fileID: 11500000, guid: b1a6ce0481f46114b8cce9148822d59b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMovement: {fileID: 3561012077987659903}
+  _playerShooter: {fileID: 8411341652398663321}
 --- !u!1001 &3574275911000157127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,6 +365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113478696586351368, guid: 3f33dcd985eeeaa45a1d9172568ab6b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2113478696586351369, guid: 3f33dcd985eeeaa45a1d9172568ab6b8,
         type: 3}
@@ -418,6 +425,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114234429686186095, guid: 3f33dcd985eeeaa45a1d9172568ab6b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2114234430421128449, guid: 3f33dcd985eeeaa45a1d9172568ab6b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2114234430421128451, guid: 3f33dcd985eeeaa45a1d9172568ab6b8,
         type: 3}
@@ -528,10 +545,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6617727074767417042, guid: 0064cf7418028eb41b039c0792faf7a0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -346244200705801105, guid: 0064cf7418028eb41b039c0792faf7a0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0064cf7418028eb41b039c0792faf7a0,
         type: 3}
       propertyPath: m_Name
       value: NierHackPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0064cf7418028eb41b039c0792faf7a0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820542772251406005, guid: 0064cf7418028eb41b039c0792faf7a0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0064cf7418028eb41b039c0792faf7a0, type: 3}
