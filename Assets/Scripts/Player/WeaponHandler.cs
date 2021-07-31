@@ -11,6 +11,11 @@ namespace TwinStickShooter
         {
             _weapon.Trigger(attacker);
         }
+
+        public void Equip(Weapon weapon)
+        {
+            _weapon = weapon;
+        }
     }
 }
 
