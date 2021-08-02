@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4810027582704383213}
   - component: {fileID: 3084076551714289280}
   - component: {fileID: 5069999151158431206}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Weapon Loot Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4810027583083527222}
   - component: {fileID: 4810027583083527220}
   - component: {fileID: 4810027583083527221}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Weapon Box Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4810027583098399087}
   - component: {fileID: 4810027583098399056}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Weapon Box Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4875,7 +4875,7 @@ GameObject:
   - component: {fileID: 4810027583241097075}
   - component: {fileID: 4810027583241097076}
   - component: {fileID: 4810027583241097077}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WeaponBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4985,3 +4985,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 0
+  _weapon: {fileID: 0}
