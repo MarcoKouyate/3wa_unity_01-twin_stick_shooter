@@ -6,24 +6,16 @@ namespace TwinStickShooter {
         [SerializeField] private WeaponHandler weaponHandler;
         [SerializeField] private Weapon[] weapons;
 
-        public void Switch(WeaponType type)
+        public void Equip(WeaponType type)
         {
             Weapon weapon = GetWeaponOfType(type);
             
             if (!weapon) return;
 
-            DisableAllWeapons();
+            Debug.Log(weapon);
+
             Equip(weapon);
         }
-
-        private void DisableAllWeapons()
-        {
-            foreach (Weapon weapon in weapons)
-            {
-                weapon.gameObject.SetActive(false);
-            }
-        }
-
 
         private Weapon GetWeaponOfType(WeaponType type)
         {
@@ -37,9 +29,17 @@ namespace TwinStickShooter {
 
         public void Equip(Weapon weapon)
         {
+            DisableAllWeapons();
             weapon.gameObject.SetActive(true);
             weaponHandler.Equip(weapon);
-            Debug.Log(weapon);
+        }
+
+        private void DisableAllWeapons()
+        {
+            foreach (Weapon weapon in weapons)
+            {
+                weapon.gameObject.SetActive(false);
+            }
         }
     }
 }

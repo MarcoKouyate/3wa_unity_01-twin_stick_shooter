@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace TwinStickShooter {
-    public enum WeaponType { Basic, Double }
+    public enum WeaponType { Custom, Basic, Double }
 
     public class Weapon : MonoBehaviour
     {

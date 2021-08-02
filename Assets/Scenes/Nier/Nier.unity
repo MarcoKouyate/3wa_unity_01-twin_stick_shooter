@@ -5618,6 +5618,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170096352}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1179503415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383213, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027582704383214, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Loot Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810027583241097077, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: _weapon
+      value: 
+      objectReference: {fileID: 8909478027495349197, guid: 723ea2a2a3ba6ef418f9a2a118538cd3,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 205a4342a264c4e418c7b2a424a1dc14, type: 3}
 --- !u!1 &1215533090
 GameObject:
   m_ObjectHideFlags: 0
@@ -11907,6 +11982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon Loot Box
       objectReference: {fileID: 0}
+    - target: {fileID: 4810027583241097077, guid: 205a4342a264c4e418c7b2a424a1dc14,
+        type: 3}
+      propertyPath: weaponType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 205a4342a264c4e418c7b2a424a1dc14, type: 3}
 --- !u!1001 &8316518067690941948
@@ -11920,6 +12000,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.631
+      objectReference: {fileID: 0}
+    - target: {fileID: 5148753471272823855, guid: f4edf1cca9c8c1742b8c236dc5a2413d,
+        type: 3}
+      propertyPath: weaponType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349909185786310666, guid: f4edf1cca9c8c1742b8c236dc5a2413d,
+        type: 3}
+      propertyPath: weaponType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8316518068214881530, guid: f4edf1cca9c8c1742b8c236dc5a2413d,
         type: 3}
