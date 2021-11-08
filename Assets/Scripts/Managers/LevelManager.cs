@@ -4,22 +4,20 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private HealthManager playerHealth;
     [SerializeField] private LevelData _level;
+    [SerializeField] private SceneChange _sceneChange;
 
-    private SceneChange _sceneChange;
-    private float _startTime;
     private int _gameDuration;
-
+    private MemoTools.Timer _timer;
 
     private void Awake()
     {
-        _sceneChange = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneChange>();
-        _startTime = Time.time;
-        _gameDuration = _level.duration;
+
+        _timer = new MemoTools.Timer(_level.duration, false);
     }
 
     private void Update()
     {
-        if (playerHealth.isDead() || GetElapsedTime() > _gameDuration)
+        if (playerHealth.isDead() || _timer.IsExpired)
         {
             Lose();
         }
@@ -37,11 +35,11 @@ public class LevelManager : MonoBehaviour
 
     public float GetRemainingTime()
     {
-        return _gameDuration - GetElapsedTime();
+        return _timer.Remaining;
     }
 
     public float GetElapsedTime()
     {
-        return Time.time - _startTime;
+        return _timer.Elapsed;
     }
 }
