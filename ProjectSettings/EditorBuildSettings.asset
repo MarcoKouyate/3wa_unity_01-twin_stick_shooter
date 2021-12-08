@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nier/Bootstrap.unity
     guid: 450833c7b9bc575488b80b2c42a0c82b
+  - enabled: 1
+    path: Assets/Scenes/Nier/Levels/Level 01.unity
+    guid: 39dab1263976ebd4cb7a5058bda805e1
+  - enabled: 1
+    path: Assets/Scenes/Nier/Levels/Level 02.unity
+    guid: 57e483cdf48623c4e9a10e087fa34c93
   m_configObjects: {}

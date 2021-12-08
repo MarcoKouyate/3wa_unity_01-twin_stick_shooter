@@ -8,6 +8,16 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void nextLevel() {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log("Scene Count " + SceneManager.sceneCount + "Scene Index " + nextSceneIndex);
+
+        if (SceneManager.sceneCountInBuildSettings > nextSceneIndex)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+    }
+
     public void quitGame()
     {
         Application.Quit();
