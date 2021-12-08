@@ -16,4 +16,5 @@ MonoBehaviour:
   duration: 70
   timeBetweenWaves: 1.5
   waves:
-  - {fileID: 5948594421728521929, guid: a4b724c5621802147b20034ec9ef62b6, type: 3}
+  - {fileID: 2423747656090493679, guid: 1966a31ba9d4ef34e87dfbec8dcb7854, type: 3}
+  - {fileID: 8880231557033723063, guid: af163a0e937804d41974f857532d9ebe, type: 3}
