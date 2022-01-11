@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class DisplayTime : MonoBehaviour
@@ -14,9 +12,15 @@ public class DisplayTime : MonoBehaviour
         textComponent = GetComponent<Text>();
     }
 
+    public void Start()
+    {
+        gameObject.SetActive(levelManager.IsTimed);
+    }
+
     public void Update()
     {
         int remaining = (int) levelManager.GetRemainingTime();
+
         
 
         if ( remaining >= 0)

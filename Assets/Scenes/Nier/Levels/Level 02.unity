@@ -5968,9 +5968,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1537687911}
-  _level: {fileID: 11400000, guid: 827a3c5715db62448a12b77ee3ec26f5, type: 2}
+  _level: {fileID: 11400000, guid: a2b0f14569514e545a6cd88b69f21ddf, type: 2}
   _sceneChange: {fileID: 414032607}
-  _nextLevel: 
+  _nextScene: 
 --- !u!4 &1309179697
 Transform:
   m_ObjectHideFlags: 0
@@ -8421,7 +8421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685054300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5497549, y: 1.56, z: 14.75}
+  m_LocalPosition: {x: 0.5497549, y: 0.1, z: 14.75}
   m_LocalScale: {x: 28.36, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
