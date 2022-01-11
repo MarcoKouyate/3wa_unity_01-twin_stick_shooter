@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _impactPrefab: {fileID: 4281181142585343423, guid: 114a1c363aa84784e9021a21fd94c7a1,
     type: 3}
+  _bounces: 0
 --- !u!114 &616938005192695771
 MonoBehaviour:
   m_ObjectHideFlags: 0

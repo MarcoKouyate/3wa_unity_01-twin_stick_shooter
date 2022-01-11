@@ -139,3 +139,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _impactPrefab: {fileID: 4281181142585343423, guid: 77d20319947e58d4693b9d796fa712ab,
     type: 3}
+  _bounces: 0
