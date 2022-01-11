@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 4277330404345332241}
   - {fileID: 819319606698464508}
   - {fileID: 7280934008454929784}
+  weaponType: 0
 --- !u!1 &4385631674462206358
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armorMultiplier: 1
-  _invicibilityDuration: 1
+  _hp: 5
+  _invicibilityDuration: 0.1
 --- !u!114 &4385631675467152499
 MonoBehaviour:
   m_ObjectHideFlags: 0

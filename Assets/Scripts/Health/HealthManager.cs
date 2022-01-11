@@ -5,19 +5,19 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] private float _armorMultiplier = 1f;
+    [SerializeField] private float _hp = 1f;
     
-    public float maxHP { get; set; }
+    public float maxHP { get; private set; }
     public float currentHP { get; set; }
 
     public float _invicibilityDuration = 0.5f;
 
-    private AudioManager _audio;
     private List<IHealthObserver> _observers;
     private float _impactTime;
 
     private void Awake()
     {
-        maxHP = 3;
+        maxHP = _hp;
         currentHP = maxHP;
         _observers = new List<IHealthObserver>();
         _impactTime = 0f;

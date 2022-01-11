@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _armorMultiplier: 1
+  _hp: 3
   _invicibilityDuration: 1
 --- !u!114 &8587091292382322498
 MonoBehaviour:
