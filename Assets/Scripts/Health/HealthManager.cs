@@ -15,6 +15,9 @@ public class HealthManager : MonoBehaviour
     private List<IHealthObserver> _observers;
     private float _impactTime;
 
+
+    public event System.EventHandler OnDeath;
+
     private void Awake()
     {
         maxHP = _hp;
@@ -42,6 +45,8 @@ public class HealthManager : MonoBehaviour
         {
             observer.OnDeath();
         }
+
+        OnDeath?.Invoke(this, System.EventArgs.Empty);
 
         Destroy(gameObject);
     }
