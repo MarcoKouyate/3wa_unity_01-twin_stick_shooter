@@ -18,7 +18,6 @@ public class BulletCollision : MonoBehaviour
         if(_bounces <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("Destroy");
             return;
         }
 

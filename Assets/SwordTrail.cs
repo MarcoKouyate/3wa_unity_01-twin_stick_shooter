@@ -17,7 +17,6 @@ namespace TwinStickShooter {
         private void Awake()
         {
             _trailTransforms = new Queue<TrailTransform>();
-            frames = 0;
         }
 
         public void Update()
@@ -47,7 +46,5 @@ namespace TwinStickShooter {
                 index++;
             }
         }
-
-        private int frames;
     }
 }
