@@ -37,7 +37,6 @@ namespace TwinStickShooter {
             while (_trailTransforms.Count > _trails.Length)
             {
                 _trailTransforms.Dequeue();
-                Debug.Log("Remove Queue");
             }
 
             foreach (TrailTransform trailTransform in _trailTransforms)
