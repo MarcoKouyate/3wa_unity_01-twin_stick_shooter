@@ -15,8 +15,6 @@ namespace TwinStickShooter {
         [SerializeField]
         private GameObject _sword;
 
-
-
         private void Awake()
         {
             _targetScale = _sword.transform.localScale;
@@ -25,9 +23,13 @@ namespace TwinStickShooter {
         private void Update()
         {
             _sword.SetActive(_disablerate <= _expansion);
-            _expansion += (InputController.Instance.OnAction) ? _expansionspeed : -_decreasespeed;
             _expansion = Mathf.Clamp01(_expansion);
             _sword.transform.localScale = Vector3.Lerp(Vector3.zero, _targetScale, _expansion);
+        }
+
+        public void Active(bool isActive)
+        {
+            _expansion += (isActive) ? _expansionspeed : -_decreasespeed;
         }
 
         private float _expansion = 0f;

@@ -2,7 +2,7 @@
 
 namespace TwinStickShooter
 {
-    public class Shooter : MonoBehaviour
+    public class Shooter : MonoBehaviour, Weaponable
     {
         [SerializeField] private Bullet _bulletPrefab;
         [SerializeField] private Transform _bulletSpawnTransform;
