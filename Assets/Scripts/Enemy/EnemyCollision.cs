@@ -15,7 +15,6 @@ public class EnemyCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet"))
         {
-            Destroy(other.gameObject);
             health.TakeDamage(1);
         }
     }
