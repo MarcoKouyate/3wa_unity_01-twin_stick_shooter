@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345590533626584988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 6692685553222203675}
   - {fileID: 6692685552898255148}
@@ -699,7 +699,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 0.5, y: 0.5, z: 10}
+    m_Scale: {x: 0.5, y: 0.5, z: 15}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1003,7 +1003,7 @@ ParticleSystem:
     m_BurstCount: 1
     m_Bursts:
     - serializedVersion: 2
-      time: 0
+      time: 0.1
       countCurve:
         serializedVersion: 2
         minMaxState: 0
@@ -4979,6 +4979,7 @@ GameObject:
   - component: {fileID: 3441359303315365335}
   - component: {fileID: 4335515707253847754}
   - component: {fileID: 1067688026337764146}
+  - component: {fileID: 5740748320412138334}
   m_Layer: 10
   m_Name: Sniper Bullet
   m_TagString: Bullet
@@ -4995,7 +4996,7 @@ Transform:
   m_GameObject: {fileID: 8020414405320247869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 30}
   m_Children:
   - {fileID: 3466646462251114991}
   m_Father: {fileID: 0}
@@ -5030,3 +5031,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5740748320412138334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020414405320247869}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc335d888226a194ea4a982c53140468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRange: 30
+  _break: 0
