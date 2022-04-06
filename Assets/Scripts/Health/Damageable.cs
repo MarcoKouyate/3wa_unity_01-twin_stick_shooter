@@ -19,7 +19,6 @@ namespace TwinStickShooter {
             
             if (!(other.gameObject.CompareTag("Bullet"))) return;
             Bullet bullet = other.GetComponent<Bullet>();
-            Debug.Log(other.name);
 
             if (!bullet) return;
             health.TakeDamage(bullet.Damage);
