@@ -1,39 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+[RequireComponent(typeof(TwinStickShooter.Rebound))]
+[RequireComponent(typeof(TwinStickShooter.MoveForward))]
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _damage = 1f;
-    public float _speed = 1f;
+    [SerializeField] private float _speed = 1f;
+
+    private void Awake()
+    {
+        _moveForward = GetComponent<TwinStickShooter.MoveForward>();
+        _rebound = GetComponent<TwinStickShooter.Rebound>();
+    }
+
 
     public float Damage {
         get => _damage;
     }
 
 
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
-
-    private void FixedUpdate()
-    {
-        _velocity = transform.forward * _speed * Time.fixedDeltaTime;
-        Vector3 newPosition = transform.position + _velocity;
-        _rigidbody.MovePosition(newPosition);
-    }
-
     public void ChangeSpeed(float speed)
     {
         _speed = speed;
+        _moveForward.ChangeSpeed(_speed);
     }
+
 
     public void DestroyWithDelay(float delay)
     {
          Destroy(gameObject, delay);
     }
 
-    private Rigidbody _rigidbody;
-    private Vector3 _velocity;
+
+    public void SetBounces(int count)
+    {
+        _rebound.SetBounce(count);
+    }
+
+    private TwinStickShooter.Rebound _rebound;
+    private TwinStickShooter.MoveForward _moveForward;
 }

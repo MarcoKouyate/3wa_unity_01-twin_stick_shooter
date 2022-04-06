@@ -19,11 +19,17 @@ namespace TwinStickShooter {
 
         private void Move()
         {
-            _rigidbody.velocity = _transform.forward * _speed;
+            _rigidbody.velocity = _transform.forward * _speed * Time.fixedDeltaTime;
+            Vector3 newPosition = _transform.position + _rigidbody.velocity;
+            _rigidbody.MovePosition(newPosition);
+        }
+
+        public void ChangeSpeed(float value)
+        {
+            _speed = value;
         }
 
         private Rigidbody _rigidbody;
         private Transform _transform;
-
     }
 }

@@ -4,44 +4,39 @@
 
 public class BulletCollision : MonoBehaviour
 {
+    #region Show In Inspector
     [SerializeField] private GameObject _impactPrefab;
-    [SerializeField] private int _bounces;
+    #endregion
 
+
+    #region Unity Awake
     private void Awake()
     {
         _meshRenderer = GetComponent<MeshRenderer>();
     }
+    #endregion
 
+
+    #region Collisions
     private void OnTriggerEnter(Collider other)
     {
         SpawnImpact();
-        if(_bounces <= 0)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-
-
-        _bounces--;
-
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position - transform.forward * 5f, transform.forward, out hit, 10f))
-        {
-            Vector3 reflectV = Vector3.Reflect(transform.forward, hit.normal);
-            transform.LookAt(transform.position + reflectV);
-        }
     }
+
 
     private void SpawnImpact()
     {
+        if (!_impactPrefab) return;
         GameObject projectile = Instantiate(_impactPrefab, transform.position, transform.rotation);
         TwinStickShooter.ParticleMaterialSetter particleMaterialSetter = projectile.GetComponent<TwinStickShooter.ParticleMaterialSetter>();
 
         if (!particleMaterialSetter) return;
         particleMaterialSetter.SetMaterial(_meshRenderer.material);
     }
+    #endregion
 
+
+    #region Private Variables
     private MeshRenderer _meshRenderer;
+    #endregion
 }
