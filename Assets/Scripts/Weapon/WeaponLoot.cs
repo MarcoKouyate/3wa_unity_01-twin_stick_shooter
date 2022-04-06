@@ -35,7 +35,6 @@ namespace TwinStickShooter {
             }
             else
             {
-                Debug.Log(weaponType);
                 weaponSwitch.Equip(weaponType);
             }
         }

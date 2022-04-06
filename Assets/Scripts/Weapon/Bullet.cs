@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private float _damage = 1f;
     public float _speed = 1f;
 
-    private Rigidbody _rigidbody;
-    private Vector3 _velocity;
-    private float _startTime;
+    public float Damage {
+        get => _damage;
+    }
+
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _startTime = Time.time;
     }
 
     private void FixedUpdate()
@@ -32,4 +33,7 @@ public class Bullet : MonoBehaviour
     {
          Destroy(gameObject, delay);
     }
+
+    private Rigidbody _rigidbody;
+    private Vector3 _velocity;
 }

@@ -12,8 +12,6 @@ namespace TwinStickShooter {
             
             if (!weapon) return;
 
-            Debug.Log(weapon);
-
             Equip(weapon);
         }
 

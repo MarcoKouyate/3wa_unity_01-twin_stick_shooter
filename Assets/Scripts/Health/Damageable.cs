@@ -16,10 +16,15 @@ namespace TwinStickShooter {
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Bullet"))
-            {
-                health.TakeDamage(1);
-            }
+            
+            if (!(other.gameObject.CompareTag("Bullet"))) return;
+            Bullet bullet = other.GetComponent<Bullet>();
+            Debug.Log(other.name);
+
+            if (!bullet) return;
+            health.TakeDamage(bullet.Damage);
+
+            
         }
     }
 }
