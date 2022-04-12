@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nier/Levels/Level 02.unity
     guid: 57e483cdf48623c4e9a10e087fa34c93
+  - enabled: 1
+    path: Assets/Scenes/Nier/Levels/Level 03.unity
+    guid: 53bbb7fdd9c491145bd0519ddb5af09a
   m_configObjects: {}

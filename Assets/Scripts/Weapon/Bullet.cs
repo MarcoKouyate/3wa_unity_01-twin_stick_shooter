@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
     public void ChangeSpeed(float speed)
     {
         _speed = speed;
+        if (!_moveForward) return;
         _moveForward.ChangeSpeed(_speed);
     }
 
@@ -34,6 +35,7 @@ public class Bullet : MonoBehaviour
 
     public void SetBounces(int count)
     {
+        if (!_rebound) return;
         _rebound.SetBounce(count);
     }
 

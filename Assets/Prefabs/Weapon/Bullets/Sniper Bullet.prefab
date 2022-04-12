@@ -4995,6 +4995,7 @@ GameObject:
   - component: {fileID: 4335515707253847754}
   - component: {fileID: 1067688026337764146}
   - component: {fileID: 5740748320412138334}
+  - component: {fileID: -6571445008310616663}
   m_Layer: 10
   m_Name: Sniper Bullet
   m_TagString: Bullet
@@ -5061,3 +5062,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxRange: 30
   _break: 0
+--- !u!114 &-6571445008310616663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8020414405320247869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69183700d4afb5643af91ea77fe77f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0

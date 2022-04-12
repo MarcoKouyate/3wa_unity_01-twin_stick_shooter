@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 4277330404345332241}
   - {fileID: 819319606698464508}
   - {fileID: 7280934008454929784}
+  swords: []
   weaponType: 0
 --- !u!1 &4385631674462206358
 GameObject:
@@ -165,6 +166,7 @@ GameObject:
   - component: {fileID: 4385631675467152498}
   - component: {fileID: 4385631675467152499}
   - component: {fileID: 3271310551214713439}
+  - component: {fileID: 631507156472383497}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -346,6 +348,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 4948626699771353834}
   attacker: {fileID: 11400000, guid: bfacecd24da2231489a50a3b01304e44, type: 2}
+--- !u!114 &631507156472383497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4385631675467152493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010266918b0fa2740be8d3104a8fadda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4590739869920096436
 PrefabInstance:
   m_ObjectHideFlags: 0
